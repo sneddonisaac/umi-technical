@@ -16,6 +16,7 @@ import { Filters as FiltersType, Post } from '../../../../types/global.ts';
 // Components
 import { Card, Loading } from '../../../globals';
 import { Filters, UserInfo } from '../../../ui';
+import { track } from '@vercel/analytics';
 
 export default function User() {
   // Get userId from url
@@ -69,7 +70,7 @@ export default function User() {
     <main className="user">
       <h1 data-testid="posts-title">Posts</h1>
       <section className="user__pagination">
-        <Link to="/" className="user__pagination-link">
+        <Link to="/" className="user__pagination-link" onClick={() => track('click', { userId: `user-pagination-link` })}>
           <ArrowLeft size={20} className="user__pagination-icon" />
           Back
         </Link>

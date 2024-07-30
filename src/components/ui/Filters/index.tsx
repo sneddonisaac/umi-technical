@@ -1,6 +1,7 @@
 // External
 import React from 'react';
 import { Sliders } from '@phosphor-icons/react';
+import { track } from '@vercel/analytics';
 
 // Types
 import { Filters as FiltersType } from '../../../types/global.ts';
@@ -17,7 +18,10 @@ export default function Filters({
 
   return (
     <section className="user__filters">
-      <button aria-label="Filter" onClick={() => setIsOpen(!isOpen)}>
+      <button aria-label="Filter" onClick={() => {
+        setIsOpen(!isOpen);
+        track('click', { userId: `user-filters-button` });
+      }}>
         <Sliders size={20} />
       </button>
       <div className="user__filters-container" data-state={isOpen}>
