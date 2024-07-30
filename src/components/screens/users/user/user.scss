@@ -161,7 +161,8 @@
           border-color: $accent;
           color: $color;
 
-          a, h2 {
+          a,
+          h2 {
             text-decoration: none;
           }
         }
@@ -181,11 +182,11 @@
     position: relative;
 
     &-container {
-      &[data-state="false"] {
+      &[data-state='false'] {
         display: none;
       }
 
-      &[data-state="true"] {
+      &[data-state='true'] {
         position: absolute;
         top: calc(100% + 0.5rem);
         right: 0;
@@ -200,7 +201,8 @@
         width: max-content;
         gap: 1rem;
         padding: 1rem;
-        filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+        filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+          drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
       }
 
       &__item {

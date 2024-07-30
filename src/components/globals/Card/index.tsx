@@ -16,13 +16,12 @@ export default function Card({ user, post }: { user?: User; post?: Post }) {
       <span>@{user.username}</span>
     </Link>
   ) : (
-    <Link
-      to={`/posts/${post?.id}`}
+    <div
       className="posts__card"
       data-testid="posts-card"
       id={`posts-card-${post?.id}`}
     >
       <h2>{post?.title}</h2>
-    </Link>
+    </div>
   );
 }
