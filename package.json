@@ -1,7 +1,8 @@
 {
   "name": "umi-technical",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
+  "homepage": "https://sneddonisaac.github.io/umi-technical/",
   "type": "module",
   "scripts": {
     "dev": "vite",
