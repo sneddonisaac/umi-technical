@@ -1,0 +1,56 @@
+@import '../../../styles/variables.scss';
+
+.users {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+        justify-content: center;
+
+        &-card {
+            background: $color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            gap: 0.75rem;
+            border: 1px solid $color;
+            border-radius: 5px;
+            color: $background;
+            transition: 0.3s ease-in-out all;
+
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+            }
+
+            &:hover,
+            &:active{
+                background: $accent;
+                border-color: $accent;
+                color: $color;
+            }
+        }
+
+        @include respond-to($breakpoint-sm) {
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+        }
+
+        @include respond-to($breakpoint-md) {
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+        }
+    }
+}

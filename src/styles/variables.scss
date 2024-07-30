@@ -1,0 +1,19 @@
+// Colors
+$color: rgba(255, 252, 238, 1);
+$secondary: rgba(224, 212, 197, 1);
+$background: rgba(14, 91, 76, 1);
+$accent: rgba(255, 106, 5, 1);
+
+// Breakpoints
+$breakpoint-xs: 0; // Extra small devices (phones)
+$breakpoint-sm: 576px; // Small devices (landscape phones)
+$breakpoint-md: 768px; // Medium devices (tablets)
+$breakpoint-lg: 992px; // Large devices (desktops)
+$breakpoint-xl: 1200px; // Extra large devices (large desktops)
+
+// Media queries mixins
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
